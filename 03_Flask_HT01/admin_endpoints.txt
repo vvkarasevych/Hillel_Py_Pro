@@ -1,0 +1,36 @@
+Административная панель заведения:
+
+1) Отображение списка блюд
+/admin/dishes [GET]
+
+
+2) Добавить блюдо
+/admin/dishes/<dish> [GET]
+3) Удалить блюдо
+/admin/dishes/<dish> [DELETE]
+4) Страница блюда
+/admin/dishes/<dish> [GET]
+5) Редактирование данных на странице блюда
+/admin/dishes/<dish> [POST]
+2-5) Исходя из того, что везде имеем дело с идентификатором объекта - блюда, то пункты 2-5 могут идти по одной ссылке:
+/admin/dishes/<dish> [GET][POST][DELETE]
+
+
+6) Активные заказы (новые и в работе)
+/admin/orders [GET]
+
+
+7) Страница заказа
+/admin/orders/<id> [GET]
+
+
+8) Добавить категорию
+/admin/category [POST]
+9) Удалить категорию
+/admin/category [DELETE]
+8-9) Я думаю, что надо все же получить список категорий - [GET]. А затем уже решить, что нам надо делать: [POST] или [DELETE]
+/admin/category [GET][POST][DELETE]
+
+
+10) Поиск за названием
+/admin/search [GET]
